@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+    ******************************** IMPORTANT MESSAGE *****************************
+    Please view the developer notes, section toolbar.xml for important observations
+    ********************************************************************************
+-->
+<android.support.v7.widget.Toolbar xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/toolbar"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@android:color/background_dark"
+    android:minHeight="?attr/actionBarSize"
+    app:collapseIcon="@android:color/background_light"
+    app:popupTheme="?android:attr/homeAsUpIndicator">
+
+    <LinearLayout
+        android:id="@+id/ll_back"
+        android:layout_width="48dp"
+        android:layout_height="40dp"
+        android:gravity="center|start"
+        android:onClick="onBackButtonPressed">
+
+        <Button
+            android:id="@+id/back_button"
+            android:layout_width="22dp"
+            android:layout_height="22dp"
+            android:background="@drawable/backbutton"
+            android:onClick="onBackButtonPressed" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_chat"
+        android:layout_width="match_parent"
+        android:layout_height="36dp"
+        android:gravity="start|center_vertical"
+        android:paddingLeft="8dp"
+        android:paddingRight="8dp"
+        android:text="@string/title_activity_chat"
+        android:textColor="@android:color/white"
+        android:textSize="22sp" />
+
+</android.support.v7.widget.Toolbar>

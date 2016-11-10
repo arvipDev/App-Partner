@@ -1,0 +1,99 @@
+<!--
+    *************************** IMPORTANT MESSAGE *****************************
+    Please view the developer notes, section 4.1 for important observations
+    ***************************************************************************
+-->
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_animation"
+    android:id="@+id/animate_root"
+    tools:context="com.apppartner.androidprogrammertest.AnimationActivity">
+
+    <include
+        android:id="@+id/animation_toolbar_layout"
+        layout="@layout/toolbar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:visibility="visible"
+        tools:layout_constraintTop_creator="1"
+        tools:layout_constraintRight_creator="1"
+        app:layout_constraintRight_toRightOf="parent"
+        tools:layout_constraintLeft_creator="1"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="0dp"
+        android:layout_height="325dp"
+        android:layout_marginStart="38dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginLeft="38dp"
+        android:layout_marginEnd="38dp"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginRight="38dp"
+        android:background="@drawable/bg_cell_animation_test"
+        android:id="@+id/ll_animate_move"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="38dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintTop_toBottomOf="@+id/animation_toolbar_layout"
+        app:layout_constraintVertical_bias="0.25">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingRight="8dp"
+            android:paddingLeft="8dp"
+            android:paddingTop="8dp"
+            android:textColor="@android:color/black"
+            android:maxLines="10"
+            android:gravity="center"
+            android:textSize="16sp"
+            android:id="@+id/tv_animation_text" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingRight="8dp"
+            android:paddingLeft="8dp"
+            android:gravity="center"
+            android:text="@string/tv_animation_bold"
+            android:textColor="@android:color/black"
+            android:textSize="18sp"
+            android:id="@+id/tv_animation_text_bold" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            app:srcCompat="@drawable/ic_apppartner"
+            android:id="@+id/iv_animation_icon"
+            android:paddingTop="16dp"
+            android:paddingBottom="16dp"
+            android:scaleType="centerInside"
+            android:contentDescription="@string/animationicon" />
+    </LinearLayout>
+
+    <Button
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:id="@+id/b_animation"
+        android:background="@drawable/btn_fade_animation"
+        android:layout_marginStart="38dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginLeft="38dp"
+        android:layout_marginEnd="38dp"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginRight="38dp"
+        android:onClick="animate"
+        android:layout_marginTop="16dp"
+        app:layout_constraintTop_toBottomOf="@+id/ll_animate_move"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="16dp"
+        app:layout_constraintVertical_bias="0.0" />
+
+</android.support.constraint.ConstraintLayout>
